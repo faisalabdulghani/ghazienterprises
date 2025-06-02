@@ -1,0 +1,196 @@
+/* === Header Layout === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  z-index: 100;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* === Logo === */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.logo-circle {
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+  
+}
+
+.brand-name {
+  font-weight: 500;
+  font-size: large;
+  color: black;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-weight: 500;
+  font-size: xx-large;
+  color: #ffb200e6;
+  text-decoration: none;
+}
+
+/* === Hamburger === */
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #060606;
+  cursor: pointer;
+}
+
+/* === Nav === */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 2rem 0rem 0rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  color: #060606;
+  white-space: nowrap;
+}
+
+.nav-links a:hover{
+  color: #ffb200e6;
+}
+
+/* === Social Icons === */
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  margin-left: auto;
+  position: relative;
+}
+
+.social-icons a {
+  width: 32px;
+  height: 32px;
+  background-color: #ffb200e6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.social-icons a svg {
+  color: #060606;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  background-color: #000000e6;
+}
+
+.social-icons a:hover svg {
+  color: #ffb200e6;
+}
+
+/* === Tooltip === */
+.social-icons a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.social-icons a:hover::after {
+  opacity: 1;
+}
+
+/* === Mobile Styles === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    padding-top: 10px;
+    margin-left: 10px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #eee;
+  }
+
+  .social-icons a {
+    background-color: #ffb200e6;
+    width: 10%;
+    height: 10%;
+  }
+
+  .social-icons a:hover {
+    background-color: #090909e6;
+  }
+
+  .social-icons a::after{
+    display: none;
+  }
+}
