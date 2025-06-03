@@ -1,7 +1,5 @@
 import React from 'react';
-import { FaCode, FaMobileAlt } from 'react-icons/fa';
-import ServiceCard from '../components/card/servicescard/ServicesCard';
-import constructionImg from '../assets/construction.png'
+
 
 const Home = () => (
     <div style={{ padding: '2rem' }}>

@@ -1,0 +1,33 @@
+.vm-section {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.vm-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vm-card {
+  flex: 1 1 300px;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.vm-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.vm-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+}

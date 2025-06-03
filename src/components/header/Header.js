@@ -26,8 +26,8 @@ const Header = () => {
             <nav className={`nav-links ${isOpen ? 'open' : ''}`}>
                 <Link to="/services" onClick={() => setIsOpen(false)}>Services</Link>
                 <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-                <Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link>
+                <Link to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</Link>
+                <Link to="/ContactUs" onClick={() => setIsOpen(false)}>Contact Us</Link>
 
                 <div className="social-icons">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" data-tooltip="Facebook">
