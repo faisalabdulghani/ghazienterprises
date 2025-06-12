@@ -1,19 +1,17 @@
-import React from 'react';
-import './style.css';
+// Vission.js
+import React from "react";
+import "./style.css";
 
-const VisionMissionSection = ({ heading, text }) => {
+const Vission = ({ icon, title, text, color }) => {
     return (
-        <section className="vm-section">
-            <div className="vm-container">
-                <div className="vm-card">
-                    <h2 className="vm-heading">{heading}</h2>
-                    <p className="vm-text">
-                        {text}
-                    </p>
-                </div>
+        <div className="vission-wrapper">
+            <div className="vission-card" style={{ "--main-color": color }}>
+                <div className="icon-circle">{icon}</div>
+                <h3>{title}</h3>
+                <p>{text}</p>
             </div>
-        </section>
+        </div>
     );
 };
 
-export default VisionMissionSection;
+export default Vission;

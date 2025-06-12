@@ -1,33 +1,73 @@
-.vm-section {
-  padding: 4rem 1rem;
-  background-color: #f9f9f9;
+.vission-wrapper {
+  position: relative;
+  padding: 20px;
 }
 
-.vm-container {
-  max-width: 900px;
-  margin: 0 auto;
+.vission-card {
+  position: relative;
+  background: white;
+  border-radius: 25px;
+  padding: 60px 20px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  border-top: 10px solid var(--main-color);
+  border-bottom: 4px solid #f1f1f1;
+  margin: 40px auto;
+}
+
+/* The incoming-outgoing curve line effect */
+.vission-card::before,
+.vission-card::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+}
+
+.vission-card::before {
+  top: -30px;
+  left: -30px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.vission-card::after {
+  bottom: -30px;
+  right: -30px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Icon Circle */
+.icon-circle {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 }
 
-.vm-card {
-  flex: 1 1 300px;
-  background-color: #fff;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
+/* Typography */
+.vission-card h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.vm-heading {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.vm-text {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: #555;
+.vission-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.4;
 }

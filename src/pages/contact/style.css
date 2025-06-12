@@ -483,9 +483,17 @@
     margin-bottom: 0.5rem;
     align-items: flex-start;
   }
+  .info-box {
+    display: none;
+  }
 }
 
+
+
 @media (max-width: 480px) {
+    .info-box {
+    display: none;
+  }
   .card {
     padding: 1.5rem;
   }
